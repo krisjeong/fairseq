@@ -16,10 +16,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
-
-# retrieve list of items to change
-
-# for directories:
-
-# pcm2wav.sh 실행
