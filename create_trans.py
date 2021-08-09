@@ -14,13 +14,14 @@ def main():
             read_files = glob.glob(f"{dir2_filepath}/*.txt")     # read all txt files
             with open(destination, "w") as outfile:
                 for f in read_files:
-                    with open(f, "r", encoding="cp949") as infile:
-                        try:
-                            x = infile.read()
-                            outfile.write(f"{str(f)[:-4].split('/')[-1]} {x}")
-                        except:     # ignore if outfile (UTF-8)
-                            print(f, "writing error")
-                            pass
+                    if f.split("/")[-1] != destination.split("/")[-1]:
+                        with open(f, "r", encoding="cp949") as infile:
+                            try:
+                                x = infile.read()
+                                outfile.write(f"{str(f)[:-4].split('/')[-1]} {x}")
+                            except:     # ignore if outfile (UTF-8)
+                                print(f, "writing error")
+                                pass
 
 
 if __name__ == '__main__':

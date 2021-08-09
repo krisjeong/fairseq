@@ -3,6 +3,7 @@ import os
 #!/usr/bin/env python3
 
 directory = os.path.abspath("datasets_korean/train_data")
+# directory = os.path.abspath("datasets_korean/test_data/eval_clean")
 # directory = os.path.abspath("datasets_korean_copy/train_data")
 
 def main():
